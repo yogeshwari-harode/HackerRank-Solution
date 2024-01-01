@@ -1,0 +1,24 @@
+int height(Node* root) {
+        int ans;
+        if(root==NULL)
+            return 0;
+        else if(root->left==NULL && root->right==NULL)
+            return 0;
+        else{
+           int ltree=height(root->left);
+           int rtree=height(root->right);
+            if(ltree>rtree)
+                ans=ltree+1;
+            else
+                ans=rtree+1; 
+        }
+        return ans;
+    }
+
+//                        OR
+/*
+
+        if(!root)   return -1;
+        return max(height(root->left),height(root->right)) + 1;
+
+*/
