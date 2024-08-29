@@ -1,0 +1,15 @@
+import re
+
+reg_ex = r"^[7-9][0-9]{9}$"
+
+n = int(input())
+
+for i in range(n):
+    mobinum = input()
+    if len(mobinum) == 10:
+        if re.match(reg_ex, mobinum):
+            print("YES")
+        else:
+            print("NO")
+    else:
+        print("NO")
