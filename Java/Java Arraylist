@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static Scanner scn = new Scanner(System.in);
+    public static List<Integer> list = new ArrayList<>();
+    
+    public static void main(String[] args) {
+        int n = scn.nextInt();
+        for(int i = 0; i < n; i++){
+            int item = scn.nextInt();
+            list.add(item);
+        }
+        
+        int q = scn.nextInt(); 
+        for(int i = 0; i < q; i++) {
+            String queryType = scn.next();
+            if (queryType.equals("Insert")) {
+                insert();
+            } else if (queryType.equals("Delete")) {
+                delete();
+            }
+        }
+        
+        for(int item : list){
+            System.out.print(item + " ");
+        }
+    }
+    
+    public static void insert() {
+        int index = scn.nextInt();
+        int element = scn.nextInt();
+        list.add(index, element);
+    }
+    
+    public static void delete() {
+        int index = scn.nextInt();
+        list.remove(index);
+    }
+}
