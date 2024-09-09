@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int a,b,c;
+        Scanner scn=new Scanner(System.in);
+        
+        try{
+            a=scn.nextInt();
+            b=scn.nextInt();
+            c=a/b;
+            System.out.println(c);
+        }
+        catch(InputMismatchException e) {
+            System.out.println("java.util.InputMismatchException");
+        }
+        catch(ArithmeticException e) {
+            System.out.println("java.lang.ArithmeticException: / by zero");
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
