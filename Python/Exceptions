@@ -1,0 +1,11 @@
+t = int(input())  # Number of test cases
+for i in range(t):
+    try:
+        # Read both inputs on the same line, splitting by space
+        a, b = map(int, input().split())
+        c = int(a / b)
+        print(c)
+    except ZeroDivisionError as e:
+        print("Error Code: integer division or modulo by zero")
+    except ValueError as e:
+        print(f"Error Code: {e}")
